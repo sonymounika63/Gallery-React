@@ -1,0 +1,70 @@
+---
+description: Outlines practical, value-driven testing guidelines focused on reliability, developer confidence, and speed. Emphasizes high-impact coverage (not overkill), structured test organization, clear scenarios, and reusable mock/test utilities—enabling fast iteration without sacrificing quality.
+globs:
+alwaysApply: true
+---
+
+# Testing Standards
+
+## Test Coverage and Structure
+
+We aim for high-impact test coverage, focused on adding value and improving developer confidence and experience. The priority is to cover critical logic, edge cases, and integration points where bugs would hurt the most. Tests should act as a safety net and enable fast, fearless iteration—not as a box-ticking exercise.
+
+We do not chase 100% coverage for its own sake. If a test doesn’t meaningfully reduce risk or help developers move faster, it’s not worth writing. The goal is smart coverage, not maximum coverage—optimize for reliability, clarity, and development speed without overengineering.
+
+Avoid e2e tests for UI. Favor unit tests.
+
+### Coverage Requirements
+
+-   Minimum test coverage: 80%
+-   Place tests in `_tests_` directory closest to the file being tested
+-   Use `.spec.ts` or `.spec.tsx` file extensions
+-   Do NOT Use `.test.ts` or `.test.tsx` file extensions
+
+### Test Organization
+
+-   Maximum nesting level: 2
+-   Use `test` or `it` for test cases
+-   Keep tests focused and atomic
+-   Follow AAA pattern (Arrange, Act, Assert)
+
+### Required Scenarios
+
+-   Happy path testing
+-   Error case handling
+-   Edge case coverage
+-   All tests must pass before completion
+
+### Test Quality
+
+-   Write clear, descriptive test names
+-   Test one concept per test case
+-   Avoid test interdependence
+-   Use meaningful assertions
+-   Avoid tests that will make the overall run slower
+
+### Component Testing
+
+-   Use `renderWithProviders` for component tests
+-   Use `renderHookWithProviders` for hook tests
+-   Avoid mocking dependent components
+-   Test component behavior, not implementation
+
+### Mocking Guidelines
+
+-   Use mock helpers instead of inline mocks
+-   Follow existing patterns for:
+    -   Entity mocks
+    -   Apollo mocks
+    -   Provider mocks
+-   Keep mocks simple and maintainable
+
+### Test Utilities
+
+-   Leverage testing utilities from [@testing-library/react](mdc:package.json)
+-   Use [@testing-library/jest-dom](mdc:package.json) for DOM assertions
+-   Follow established patterns in existing tests
+
+## File Patterns
+
+These rules apply to all test files with `.spec.ts` or `.spec.tsx` extensions.

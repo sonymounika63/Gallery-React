@@ -1,0 +1,41 @@
+---
+description: Defines consistent patterns for API and form error handling—focusing on clear user feedback, robust validation, and reliable logging to improve user experience, developer debugging, and overall app resilience.
+globs:
+alwaysApply: false
+---
+# Error Handling Standards
+
+## API Error Handling
+Implement comprehensive API error handling
+
+### Error Types
+- Handle network errors
+- Handle server errors
+- Handle validation errors
+- Handle Apollo-specific errors
+
+### Error Presentation
+- Show error toasts for user feedback
+- Use original error messages when appropriate
+- Provide clear, actionable error messages
+- Log errors for debugging
+
+## Form Validation
+Implement robust form validation
+- Validate all user inputs
+- Show validation errors clearly
+- Handle form submission errors
+- Use [@hookform/resolvers](mdc:package.json) for validation
+
+### Error Display
+- Show validation errors inline
+- Provide clear error messages
+- Highlight invalid fields
+- Prevent form submission with invalid data
+
+## Best Practices
+- Use try-catch blocks appropriately
+- Implement proper error boundaries
+- Log errors for debugging
+- Provide user-friendly error messages
+- Handle edge cases gracefully

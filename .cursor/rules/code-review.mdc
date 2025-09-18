@@ -1,0 +1,40 @@
+---
+description: Outlines expectations for pull request size, test coverage, documentation, and review process—promoting focused, well-tested, and maintainable contributions that align with team standards and improve review efficiency.
+globs:
+alwaysApply: false
+---
+# Code Review Standards
+
+## Pull Request Guidelines
+
+### Size Requirements
+- Maximum PR size: 400 lines
+- Split large changes into smaller, focused PRs
+- Keep changes atomic and focused
+- Consider impact on review process
+
+## Testing Requirements
+Ensure comprehensive test coverage:
+
+### Test Coverage
+- All new code must include tests
+- Follow testing standards in [testing.mdc](mdc:.cursor/rules/testing.mdc)
+- Include unit tests for new functionality
+- Avoid making a ton of changes to existing tests while refactoring
+
+### Code Documentation
+- Document complex logic with comments
+- Explain non-obvious implementation details
+- Document features added and important caveats in README
+
+### Review Process
+- Review for code quality
+- Check for test coverage
+- Verify documentation
+- Ensure adherence to project standards
+
+## Best Practices
+- Keep PRs focused and manageable
+- Include clear PR descriptions
+- Reference related issues/tickets
+- Respond to review comments promptly

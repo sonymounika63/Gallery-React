@@ -1,0 +1,38 @@
+---
+description: Defines best practices for optimizing React components, rendering efficiency, and dependency management—focusing on minimizing re-renders, reducing bundle size, and enabling smooth user experiences through memoization, lazy loading, and performance-aware development.
+globs:
+alwaysApply: false
+---
+# Performance Standards
+
+## React Optimization
+Optimize React components for better performance:
+
+### Component Optimization
+- Use `React.memo` for pure components
+- Implement `useCallback` for function props
+- Use `useMemo` for expensive computations
+- Avoid inline function definitions in render
+
+## Rendering Optimization
+Prevent unnecessary re-renders:
+- Avoid inline styles in components
+- Prevent inline object creation in render
+- Use proper key props in lists
+- Memoize complex objects and callbacks
+
+### Dependencies
+- Prefer existing dependencies over new ones
+- Review [package.json](mdc:package.json) before adding new packages
+- Consider bundle size impact of new dependencies
+- Use tree-shaking friendly imports
+
+## Best Practices
+- Implement proper code splitting
+- Use lazy loading for routes and large components
+- Optimize images and assets
+- Monitor performance metrics
+- Use React DevTools for performance profiling
+
+## File Patterns
+These rules apply to all TypeScript and TSX files in the project.

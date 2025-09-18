@@ -1,0 +1,85 @@
+---
+description: Defines best practices for building consistent, maintainable, and responsive UI in Mallard Bay projects
+globs:
+alwaysApply: true
+---
+
+# UI Development Standards
+
+## Theme Usage
+
+Use theme values consistently across all components:
+
+### Colors
+
+-   Use theme colors instead of hardcoded values
+-   Example: `theme.colors.primary` instead of `'#000000'`
+
+### Spacing
+
+-   Use theme spacing values for margins and padding
+-   Example: `theme.space[4]` instead of `'16px'`
+
+### Typography
+
+-   Use theme typography settings for text styles
+-   Example: `theme.fontSizes.md` instead of `'16px'`
+
+### Borders
+
+-   Use theme border styles and radius values
+-   Example: `theme.borders.sm` instead of `'1px solid'`
+
+## Component Structure
+
+Maintain clean and consistent component structure:
+
+### Nesting
+
+-   Limit component nesting to maximum depth of 3
+-   Keep component hierarchy readable and maintainable
+
+### Inline Styles
+
+-   Limit inline styles to maximum of 2 per component
+-   Prefer theme-based styling
+
+### Component Library
+
+-   Use existing components in @mallardbay/lib-react-components, @mallardbay/lib-react-components is based off Crakra UI v2
+-   If no component available in @mallardbay/lib-react-components, create one using Crakra UI and place it under src/components/shared/todo-lib-react-components/ to me moved later
+
+## Responsive Design
+
+Ensure responsive and accessible design:
+
+### Breakpoints
+
+-   Use theme breakpoints for responsive design
+-   Implement mobile-first approach
+
+### Spacing
+
+-   Use responsive spacing values
+-   Adapt layouts for different screen sizes
+
+### Animations
+
+-   Use theme transition values for animations
+-   Keep animations smooth and performant
+
+### Rendering
+
+-   Optimize component rendering
+-   Avoid unnecessary re-renders
+-   Use React.memo and useMemo when appropriate
+
+## File Patterns
+
+These rules apply to all TypeScript and TSX files in the project.
+
+## Components
+
+-   Keep components small and focused on a single responsibility
+-   Use functional components with hooks instead of class components
+-   Prefer `export default function ImpersonationBox() {` over `function ImpersonationBox(): React.ReactElement | null {` when defining components

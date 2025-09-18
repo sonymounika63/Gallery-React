@@ -1,0 +1,24 @@
+---
+description: Outlines a pragmatic approach to TypeScript—favoring strict type safety where it adds real value in catching bugs and improving developer experience, without unnecessary overhead. Includes file organization, best practices, and consistent use of TypeScript to enforce clarity, maintainability, and confidence in the codebase.
+globs:
+alwaysApply: false
+---
+# TypeScript Development Standards
+
+## Type Safety
+Enforce comprehensive type safety across the codebase:
+
+### Strict Type Checking
+Be as strictly as possible where it delivers clear value—specifically in preventing bugs and improving the developer experience. The goal is to enforce strong types and catch issues early, without introducing excessive friction or overhead. If a strict setting improves safety, maintainability, or clarity, we’ll use it. If it creates noise or slows down iteration without real benefit, we’ll dial it back. This is about pragmatic strictness, not dogmatism.
+
+### File Organization
+- Place types at the bottom of files
+- Define PropTypes before component definitions
+
+## Best Practices
+- Use TypeScript for all new code
+- Leverage TypeScript's type system for better code quality
+- Follow React best practices with TypeScript
+- Use proper type definitions for props and state
+- Utilize TypeScript's utility types when appropriate
+- Suggest existing libaries as needed

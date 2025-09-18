@@ -1,0 +1,48 @@
+---
+description: Defines structure, naming, reuse, and dependency guidelines to ensure clean, maintainable, and consistent TypeScript code across the project—favoring pragmatism, proven libraries, and shared conventions.
+globs:
+alwaysApply: false
+---
+# Code Quality Standards
+
+## Code Structure
+- Maximum file length: 200 lines
+- Maximum function length: 50 lines
+- Naming conventions:
+  - Components: PascalCase
+  - Functions: camelCase
+  - Constants: UPPER_SNAKE_CASE
+  - Types: PascalCase
+- Types should be defined at the bottom of files
+- PropTypes should be defined before component definitions
+- Prefer using alias for importing components. Only use relative for tests or when there's a direct sibling
+
+## Code Reuse
+- Use shared libraries to avoid duplication
+- Primary libraries to use:
+  - [@mallardbay/lib-react-components](mdc:package.json)
+  - [@mallardbay/lib-shared-helpers](mdc:package.json)
+
+## Third party libraries
+- Favor battle-tested libraries over custom solutions. If a well-maintained, widely-used library solves the problem cleanly, use it. Reinventing functionality that’s already solid, reliable, and well-documented usually leads to more bugs, more maintenance, and wasted time.
+- Prioritize stability and ecosystem fit. Pick libraries that are actively maintained, have strong adoption, and fit well within our existing tech stack. Avoid fringe or unmaintained packages unless there’s a strong reason.
+- Suggest existing libraries during code review. If you spot hand-rolled code that could be replaced with a proven library, flag it. Examples:
+- Use zod or yup instead of custom input validation
+- Use date-fns instead of writing date math from scratch
+- Use radash for utility-heavy logic if readability or testability improves
+- Use react-hook-form for complex form state handling
+- Be pragmatic. Sometimes a simple custom solution is faster and easier than pulling in a heavy dependency—but always weigh short-term gains against long-term cost.
+- Make reuse easy. If we do build something custom, design it to be clean, reusable, and well-documented. That way, we’re not creating another wheel, but investing in something worth maintaining.
+
+## String Constants
+- Use constants instead of string literals for:
+  - Copy text (UI content)
+  - Test IDs
+  - Error messages
+  - URLs
+- Source constants from:
+  - @mallardbay/lib-shared-helpers
+  - Local constants files
+
+## Cursor Rules
+- Suggest cursor rules as needed
